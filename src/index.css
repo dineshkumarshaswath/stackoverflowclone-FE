@@ -1,0 +1,30 @@
+body{
+    background:linear-gradient(to bottom right,#FF6868,#FF68DE);
+    background-repeat:repeat
+}
+
+.paginationBttns{
+    width:80%;
+    height:50px;
+    list-style-type: none;
+    display:flex;
+    justify-content: center;
+    margin:70px
+
+
+    
+}
+.paginationBttns a{
+    padding: 9px;
+    margin:3px;
+   border-radius: 30px;
+    background-color:skyblue;
+    color:rgb(58, 22, 201);
+    text-decoration: none;
+    cursor: pointer;
+}
+.paginationBttns a:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+
