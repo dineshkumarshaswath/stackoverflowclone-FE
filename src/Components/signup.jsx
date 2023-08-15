@@ -9,11 +9,11 @@ import { useFormik } from 'formik'
 import Navbar from 'react-bootstrap/Navbar';
 
 const singinSchema = yup.object({
-   name: yup.string().required("* required").min(7, "minimum 15 characters required"),
+   name: yup.string().required("* required").min(7, "minimum 7 characters required"),
    email: yup.string().required("* required").min(15, "minimum 15 characters required"),
    contact: yup.string().required("* required").min(10, "minimum 10 characters required").
       max(10, "maximum 10 characters required"),
-   password: yup.string().required("* required").min(10, "Must contain all uppercase and lowercase")
+   password: yup.string().required("* required").min(10, "Must  10 character and contain all uppercase and lowercase")
 })
 
 function Signup() {
@@ -69,11 +69,11 @@ function Signup() {
          <Base>
 
             <Row sm={1} md={1} lg={1}
-               style={{ textAlign: 'center', marginTop: "10px", }}>
+               style={{ textAlign: 'center', marginTop: "10px", width:"100%"}}>
                <Form onSubmit={handleSubmit}
                   style={{ display: "grid", placeItems: "center", marginTop: "30px" }}
                >
-                  <Col style={{ textAlign: "center", width: '30%' }} variant="success"  >
+                  <Col style={{ textAlign: "center", width: '50%' }} variant="success"  >
                      <Form.Group className="mb-1" controlId="exampleForm.ControlTextarea1">
                         <Form.Label style={{ display: "flex", alignItmes: "start" }}>Name</Form.Label>
                         <Form.Control type="text" placeholder="Your name" style={{
@@ -90,7 +90,7 @@ function Signup() {
                   <Col style={{ color: 'crimson', textAlign: "center", width: '30%', margin: "1px" }}>
                      {touched.name ? errors.name : ""}</Col>
 
-                  <Col style={{ textAlign: "center", width: '30%' }} variant="success" >
+                  <Col style={{ textAlign: "center", width: '50%' }} variant="success" >
                      <Form.Group className="mb-1" controlId="exampleForm.ControlTextarea1">
                         <Form.Label style={{ display: "flex", alignItmes: "start" }}>Email</Form.Label>
                         <Form.Control type="email" placeholder="Example:john@gmail.com" style={{
@@ -107,7 +107,7 @@ function Signup() {
                   <Col style={{ color: 'crimson', textAlign: "center", width: '30%', margin: "1px", }}>
                      {touched.email ? errors.email : ""}</Col>
 
-                  <Col style={{ textAlign: "center", width: '30%' }} variant="success" >
+                  <Col style={{ textAlign: "center", width: '50%' }} variant="success" >
                      <Form.Group className="mb-1" controlId="exampleForm.ControlTextarea1">
                         <Form.Label style={{ display: "flex", alignItmes: "start" }}>Contact</Form.Label>
                         <Form.Control type="number" placeholder="Enter phone No"
@@ -123,7 +123,7 @@ function Signup() {
                   <Col style={{ color: 'crimson', textAlign: "center", width: '30%', margin: "1px" }}>
                      {touched.contact ? errors.contact : ""}</Col>
 
-                  <Col style={{ textAlign: "center", width: '30%' }} variant="success"  >
+                  <Col style={{ textAlign: "center", width: '50%' }} variant="success"  >
                      <Form.Group className="mb-1" controlId="exampleForm.ControlTextarea1">
                         <Form.Label style={{ display: "flex", alignItmes: "start" }}>Password</Form.Label>
                         <Form.Control type="password" placeholder="Password"

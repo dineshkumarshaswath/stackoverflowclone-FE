@@ -75,13 +75,13 @@ function Login() {
 
 
                 <Row sm={1} md={1} lg={1} xl={1}
-                    style={{ textAlign: "center" }}>
+                    style={{ textAlign: "center" ,width:"100%"}}>
 
                     <Form onSubmit={handleSubmit}
                         style={{ display: "grid", placeItems: "center", marginTop: "50px", }}
                     >
 
-                        <Col style={{ textAlign: "center", width: '30%', margin: "5px" }}  >
+                        <Col style={{ textAlign: "center", width: '50%', margin: "5px" }}  >
                             <Form.Group className="mb-1" controlId="exampleForm.ControlTextarea1">
                                 <Form.Label style={{ display: "flex", alignItmes: "start" }}>Email</Form.Label>
                                 <Form.Control style={{ textAlign: "center", borderRadius: "20px" }}
@@ -94,8 +94,10 @@ function Login() {
 
                         <Col style={{ color: 'crimson', textAlign: "center", width: '30%', margin: "5px" }}>
                             {touched.email ? errors.email : ""}</Col>
+                            <Col>
+                            <a href="/forgot" style={{color:"black",textDecoration:"none"}}>forgotpassword?</a></Col>
 
-                        <Col style={{ textAlign: "center", width: '30%', margin: "5px" }} variant="success" >
+                        <Col style={{ textAlign: "center", width: '50%', margin: "5px" }} variant="success" >
                             <Form.Group className="mb-1" controlId="exampleForm.ControlTextarea1">
                                 <Form.Label style={{ display: "flex", alignItmes: "start" }}>Password</Form.Label>
                                 <Form.Control type="password" placeholder="Your Password"
@@ -114,7 +116,7 @@ function Login() {
                         </Col>
 
 
-                        {error ? <Col style={{ textAlign: "center", width: '30%', margin: "5px" }}
+                        {error ? <Col style={{ textAlign: "center", width: '40%', margin: "5px" }}
                         ><Form.Control style={{
                             Color: "crimson"
                             , fontWeight: "bold", textAlign: "center"

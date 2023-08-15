@@ -14,6 +14,8 @@ import Useranswer from './Components/useranswer';
 import Addanswer from './Components/addanswer';
 import Editanswer from './Components/edituseranswer';
 import Base from './Components/base';
+import Forgotpassword from './Components/forgot';
+import Resetpassword from './Components/reset';
 
 
 function App() {
@@ -29,15 +31,25 @@ function App() {
      <Login/>
     </Route>
 
+    <Route path ="/signup">
+    <Signup/>
+    </Route>
+
+
+    <Route path="/forgot">
+      <Forgotpassword/>
+    </Route>
+
+    <Route path="/reset/password/:token">
+      <Resetpassword/>
+    </Route>
+
     <Route path ="/question">
     <Question 
     />
     </Route>
 
-    <Route path ="/signup">
-    <Signup/>
-    </Route>
-
+   
     <Route path="/userquestion">
       <Userquestion
       question={question} 
