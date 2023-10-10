@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { Row, Col, FormControl, Button, Form } from 'react-bootstrap'
 
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
-import Base from './base';
+
+
 import * as yup from 'yup'
 import { useFormik } from 'formik';
+import Userbase from './userbase';
 
 
 
@@ -91,7 +93,7 @@ function Addanswer() {
 
 
   return (
-    <Base>
+    <Userbase>
       <Row sm={1} md={1} lg={1}>
 
 
@@ -161,7 +163,7 @@ function Addanswer() {
         </Form>
       </Row>
 
-    </Base>
+    </Userbase>
 
   )
 

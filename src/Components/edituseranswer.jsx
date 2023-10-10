@@ -4,6 +4,7 @@ import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min
 import Base from './base';
 import * as yup from 'yup'
 import { useFormik } from 'formik';
+import Userbase from './userbase'
 
 const answerSchema = yup.object({
 
@@ -79,7 +80,7 @@ function Editanswer({ answer, setAnswer }) {
 
 
   return (
-    <Base>
+    <Userbase>
       <Row sm={1} md={1} lg={1}>
 
 
@@ -144,7 +145,7 @@ function Editanswer({ answer, setAnswer }) {
         </Form>
       </Row>
 
-    </Base>
+    </Userbase>
 
   )
 }

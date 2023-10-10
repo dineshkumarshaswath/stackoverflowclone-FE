@@ -6,6 +6,7 @@ import Badge from 'react-bootstrap/Badge';
 import Card from 'react-bootstrap/Card';
 import {Row,Col, Button} from "react-bootstrap"
 import {  FormControl, Form } from 'react-bootstrap'
+import Userbase from './userbase'
 
 function Userquestion({question,setQuestion}){
    const history=useHistory()
@@ -75,7 +76,7 @@ function Userquestion({question,setQuestion}){
 
     return(
         <>
-     <Base>
+     <Userbase>
      <Row  xs={1} sm={1} md={1} lg={1}  >
       <Form  style={{ display:"grid", placeItems: "center",
      margin: "20px", borderRadius:"10px" }}>
@@ -131,7 +132,7 @@ function Userquestion({question,setQuestion}){
 
     
    </Row>
-   </Base>
+   </Userbase>
 
    </>
    

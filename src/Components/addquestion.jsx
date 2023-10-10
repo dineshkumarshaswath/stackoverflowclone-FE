@@ -8,6 +8,7 @@ import { useFormik } from 'formik';
 import ReactQuill from "react-quill"
 
 import "react-quill/dist/quill.snow.css"
+import Userbase from './userbase';
 
 const questionSchema = yup.object({
   question: yup.string().required("*  required").min(15, "minimum 15 characters required"),
@@ -79,7 +80,7 @@ function Addquestion() {
   }
 
   return (
-    <Base>
+    <Userbase>
       <Row sm={1} md={1} lg={1}>
 
 
@@ -128,7 +129,7 @@ function Addquestion() {
         </Form>
       </Row>
 
-    </Base>
+    </Userbase>
 
   )
 }

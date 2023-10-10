@@ -5,6 +5,7 @@ import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min
 import Base from './base';
 import * as yup from 'yup'
 import { useFormik } from 'formik';
+import Userbase from './userbase'
 
 const questionSchema = yup.object({
   question: yup.string().required("*  required").min(15, "minimum 15 characters required"),
@@ -79,7 +80,7 @@ function Editquestion({ question, setQuestion }) {
 
 
   return (
-    <Base>
+    <Userbase>
       <Row sm={1} md={1} lg={1}>
 
 
@@ -128,7 +129,7 @@ function Editquestion({ question, setQuestion }) {
         </Form>
       </Row>
 
-    </Base>
+    </Userbase>
 
   )
 }
